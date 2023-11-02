@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+        padding:10%;
+        margin:100px;
+        background-color:pink;
+        color:blue;
+        text-align:center;
+        }
+        .res{
+        color:blue;
+        background-color:white;
+        }
+        button{
+        color:blue;
+        background-color:pink;}
+
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <div class="section">
+        <div class="header">
+            <h1>My CALCULATOR</h1>
+        </div>
+        <div class="display">
+            <label>Value 1</label>
+            <input type="text" name="num1" class="form-cont"><br><br>
+            <select name="optr">
+                <option value="+">+</option>
+                 <option value="-">-</option>
+                 <option value="*">*</option>
+                 <option value="/">/</option>
+            </select><br><br>
+            <label>Value 2</label>
+            <input type="text" name="num2" class="form-cont"><br><br>
+                <button>Result</button>
+                <input type="text" class="res" value="{{ c }}">
+        </div>
+    </div>
+</form>
+</body>
+</html>
